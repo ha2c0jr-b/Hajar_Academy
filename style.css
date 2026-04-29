@@ -15,112 +15,127 @@
 
 .up {
     background-color: rgba(255, 255, 255, 0.1);
-backdrop-filter: blur(15px);
-box-shadow: 0 0 20px rgba(0,0, 0, 0.2);
+    backdrop-filter: blur(15px);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
     width: 80%;
     height: 80%;
     border-radius: 20px;
-    overflow: hidden;
+overflow:hidden;
 
 }
-nav{
+
+nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 80%;   
+    width: 80%;
     margin: auto;
     padding: 20px 0;
 }
 
-nav .logo{
+nav .logo {
     color: #fff;
     text-decoration: none;
     font-size: large;
-font-weight: 700;
-
+    font-weight: 700;
+    margin-bottom: 20px;
+display: block;
 }
-nav ul li{
+
+nav ul li {
     display: inline-block;
     margin: 0 6px
-
 }
 
-nav ul li a{
+nav ul li a {
     color: #fff;
     text-decoration: none;
     font-size: 15px;
     font-weight: 500;
-    
+
 }
-nav ul li a:hover{
+
+nav ul li a:hover {
     color: blueviolet;
 }
-.content{
+
+.content {
     display: flex;
-    align-items: center;
-justify-content: space-between;
-align-items: center;
-height: 100%;
-width: 80%;
-margin: auto;
+    flex-direction: column;
 
+    justify-content: flex-start;
+    text-align: center;
+     align-items: center;
+    padding: 50px 10%;
+    min-height 100vh;
 }
-.content .text{
+
+.content .text {
     color: #fff;
-    width: 40%;
-}
-.content .text h1{
-    font-size: 30px;
-font-weight: 700;
-  margin: 10px ;
 
+    margin-bottom: 20px;
 }
-.content .text p{
+
+.content .text h1 {
+    font-size: 1.7rem;
+    margin-bottom: 10px;
+}
+
+.content .text p {
     font-size: 16px;
-  margin: 10px ;
+    margin: 10px;
+    
 }
+
 .content .image {
-    width: 40% ;
+    width: 100%;
+    display: flex;
+justify-content: center;}
+
+.content .image img {
+    width: 90% !important;
+    max-width: none!important;
+    height: auto !important;
+    display: block;
+`
+   
 }
-.content .image img{
-    width: 400px;
-}
-@media (min-width:950px) and (max-width:1150px){
-    .content .image img{
-        width: 330px;
+
+
+@media (max-width:950px) {
+
+    .content,
+    nav {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .content .image,
+    .content .text {
+        width: 80%;
+        text-align: center;
+    }
+
+    .content .image,
+    .content .text {
+        width: 80%;
     }
 }
-    
 
-
-@media (max-width:950px){
-.content, nav{
-    flex-direction: column;
-    justify-content: center;
-}
-.content .image , .content .text{
-    width:80%;
-text-align: center;}
-
-.content .image , .content .text{
-    width: 80%;
-}
-}
-
-.button{
+.button {
     display: inline-flex;
-    margin: 30px ;
+    margin: 30px;
     align-items: center;
     padding: 6px 20px;
     text-decoration: none;
     color: #fff;
     cursor: pointer;
-   border-radius: 80px;
-   font-weight :bold;
-  background-color: rgb(167, 45, 75);
-  justify-content: center;
-  border:2px solid rgb(128, 30, 141);
-
+    border-radius: 80px;
+    font-weight: bold;
+    background-color: rgb(167, 45, 75);
+    justify-content: center;
+    border: 2px solid rgba(8, 87, 133, 0.315);
+ filter: drop-shadow(0 0 15px rgba(255,255,255,0.3));
 }
 
 
@@ -128,58 +143,65 @@ text-align: center;}
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
-font-family: 'tajawal', sans-serif ;
-display: flex;
-justify-content: center;
-flex-wrap: wrap;
-margin-top: 100px;
-gap:20px;
+    font-family: 'tajawal', sans-serif;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 100px;
+    gap: 20px;
 }
 
 .body-page2 {
-        background-image: linear-gradient( black, rgb(13, 4, 43), rgba(46, 3, 27, 0.945));
-}
-.wlcm{background-color: rgba(38, 18, 87, 0.568);
-font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-text-align: center;
-margin: 30px;
-padding: 2px;
-color: #d4af37;
+    background-image: linear-gradient(black, rgb(13, 4, 43), rgba(46, 3, 27, 0.945));
 }
 
-  .card{
+.wlcm {
+    background-color: rgba(38, 18, 87, 0.568);
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-align: center;
+    margin: 30px;
+    padding: 2px;
+    color: #d4af37;
+}
+
+.card {
     flex: 0 0 325px;
     width: 325px;
     margin: 10px;
-    background-color: #fff;
+    background-color: #f4f4f4;
     border-radius: 8px;
-overflow: hidden;
-box-shadow: 0px 2px 4px rgba(7, 6, 6, 0.5);
-  }
-.card img{
+    overflow: hidden;
+    box-shadow: 0px 2px 4px rgba(255, 196, 0, 0.7);
+}
+
+.card img {
     width: 100%;
     max-width: 350px;
-     height: auto;
+    height: auto;
     display: block;
-    object-fit:cover ;
+    object-fit: cover;
 
 }
-.card-content{
+
+.card-content {
     padding: 16px;
 
 }
-.card-content h2{
+
+.card-content h2 {
     font-size: 28px;
     margin-bottom: 8px;
 }
-.card-content p{
+
+.card-content p {
     color: #666;
-    font-size:15px;
+    font-size: 15px;
     line-height: 1.3;
 }
-.card-content .btn{
-  display: block;
-  width: fit-content;
+
+.card-content .btn {
+    display: block;
+    width: fit-content;
     padding: 8px 16px;
     background-color: #333;
     text-decoration: none;
@@ -188,15 +210,18 @@ box-shadow: 0px 2px 4px rgba(7, 6, 6, 0.5);
     color: #fff;
     margin-right: auto;
     margin-left: 0;
+    cursor: pointer;
 }
-.linoo{
+
+.linoo {
     text-align: center;
     margin: 40px 0;
     color: #d4af37;
 }
+
 .membership-card {
-    background: #222; 
-    border: 2px solid #d4af37; 
+    background: #222;
+    border: 2px solid #d4af37;
     border-radius: 15px;
     padding: 30px;
     max-width: 600px;
@@ -279,23 +304,37 @@ box-shadow: 0px 2px 4px rgba(7, 6, 6, 0.5);
 .join-btn:hover {
     background: #f1c40f;
 }
-.title{text-align: center; color: #333; margin-top: 50px; margin-bottom: 40px;}
+
+.title {
+    text-align: center;
+    color: #333;
+    margin-top: 50px;
+    margin-bottom: 40px;
+}
+
 .course-container {
     display: flex;
+    width: 100%;
     flex-direction: column;
-    background: #ffffff;
-    border: 1px solid #eee;
+    align-items: center;
+
+
     border-radius: 12px;
     margin: 20px auto;
     max-width: 900px;
     overflow: hidden;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
     direction: rtl;
+}
+
+.all-bg {
+    background-color: #27388665;
+
 }
 
 .video-box {
     flex: 1;
-    background:rgba(0, 0, 0, 0.007);
+    background: rgba(180, 19, 19, 0.007);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -341,11 +380,12 @@ box-shadow: 0px 2px 4px rgba(7, 6, 6, 0.5);
     margin-top: 25px;
     padding: 10px;
     background: #f9f9f9;
-    border-right: 4px solid #27ae60;
+    border-right: 4px solid #0300070c;
     font-weight: bold;
     color: #27ae60;
     font-size: 18px;
 }
+
 .back-btn {
     display: inline-block;
     padding: 8px 20px;
@@ -368,10 +408,12 @@ box-shadow: 0px 2px 4px rgba(7, 6, 6, 0.5);
     margin: 20px auto;
     display: flex;
     flex-direction: column;
-    gap: 15px; 
+    gap: 15px;
 }
 
-.contact-form input, .contact-form select, .contact-form textarea {
+.contact-form input,
+.contact-form select,
+.contact-form textarea {
     padding: 12px;
     border: 1px solid #ddd;
     border-radius: 8px;
@@ -380,9 +422,38 @@ box-shadow: 0px 2px 4px rgba(7, 6, 6, 0.5);
     outline: none;
 }
 
-.contact-form input:focus, .contact-form textarea:focus {
-    border-color: #f1c40f; 
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: #f1c40f;
     box-shadow: 0 0 5px rgba(241, 196, 15, 0.2);
 }
 
+.bg-about {
+    background-image:
+        linear-gracdient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+        url('/images/');
+    background-size: cover;
+    height: 250px;
 
+}
+
+.all-bgcontact {
+    background-color: #5c158b8c;
+}
+
+.all-bgcontac {
+    background-color: #99c59996;
+}
+
+.end {
+    color: #0b001b;
+
+    height: auto;
+    padding: 20px 0;
+    margin: auto;
+    display: block;
+    text-align: center;
+    width: 100%;
+    clear: both;
+
+}
